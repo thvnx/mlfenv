@@ -14,4 +14,5 @@
    License along with mlfenv. If not, see
    <http://www.gnu.org/licenses/>. *)
 
-external fegetround : unit -> int = "caml_fegetround"
+external fegetround_ : unit -> int = "caml_fegetround"
+let fegetround = fegetround_ ()

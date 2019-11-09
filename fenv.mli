@@ -14,4 +14,4 @@
    License along with mlfenv. If not, see
    <http://www.gnu.org/licenses/>. *)
 
-val fegetround : unit -> int
+val fegetround : int
