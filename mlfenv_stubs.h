@@ -17,12 +17,9 @@
 #ifndef MLFENV_STUBS_H
 #define MLFENV_STUBS_H
 
-#include <caml/alloc.h>
-#include <caml/callback.h>
 #include <caml/custom.h>
 #include <caml/fail.h>
 #include <caml/memory.h>
-#include <caml/mlvalues.h>
 #include <fenv.h>
 
 static struct custom_operations fenv_ops = {"https://github.com/thvnx/mlfenv",
