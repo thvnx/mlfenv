@@ -16,5 +16,5 @@
 
 type rounding_mode = TONEAREST | UPWARD | DOWNWARD | TOWARDZERO
 
-val fegetround : int
+val fegetround : unit -> int
 val fesetround : rounding_mode -> unit

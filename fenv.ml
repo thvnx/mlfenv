@@ -16,7 +16,6 @@
 
 type rounding_mode = TONEAREST | UPWARD | DOWNWARD | TOWARDZERO
 
-external fegetround_ : unit -> int = "caml_fegetround"
-let fegetround = fegetround_ ()
+external fegetround : unit -> int = "caml_fegetround"
 
 external fesetround : rounding_mode -> unit = "caml_fesetround"

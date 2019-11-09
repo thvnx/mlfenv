@@ -14,4 +14,4 @@
    License along with mlfenv. If not, see
    <http://www.gnu.org/licenses/>. *)
 
-Printf.printf "%d\n" Fenv.fegetround
+Printf.printf "%d\n" (Fenv.fegetround ())
