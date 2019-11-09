@@ -1,5 +1,6 @@
 (library
  (name mlfenv)
  (modules fenv)
+ (wrapped false)
  (c_names mlfenv_stubs)
  (c_flags -O2 -Wall -Wextra))
