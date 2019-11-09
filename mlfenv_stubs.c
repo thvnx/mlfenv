@@ -15,3 +15,10 @@
  <http://www.gnu.org/licenses/>. */
 
 #include "mlfenv_stubs.h"
+
+CAMLprim value
+caml_fegetround ()
+{
+  CAMLparam0 ();
+  CAMLreturn (Val_int (fegetround()));
+}
