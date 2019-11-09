@@ -14,7 +14,11 @@
    License along with mlfenv. If not, see
    <http://www.gnu.org/licenses/>. *)
 
+(** Rounding modes as defined by fenv. *)
 type rounding_mode = TONEAREST | UPWARD | DOWNWARD | TOWARDZERO
 
+(** Get rounding mode *)
 val fegetround : unit -> rounding_mode
+
+(** Set rounding mode *)
 val fesetround : rounding_mode -> unit
