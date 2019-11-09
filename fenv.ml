@@ -14,5 +14,9 @@
    License along with mlfenv. If not, see
    <http://www.gnu.org/licenses/>. *)
 
+type rounding_mode = TONEAREST | UPWARD | DOWNWARD | TOWARDZERO
+
 external fegetround_ : unit -> int = "caml_fegetround"
 let fegetround = fegetround_ ()
+
+external fesetround : rounding_mode -> unit = "caml_fesetround"

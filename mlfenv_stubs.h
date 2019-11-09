@@ -34,4 +34,22 @@ static struct custom_operations fenv_ops = {"https://github.com/thvnx/mlfenv",
                                             custom_compare_ext_default,
                                             custom_fixed_length_default};
 
+static int
+rnd_val (value r)
+{
+  switch (Long_val (r))
+    {
+    case 0:
+      return FE_TONEAREST;
+    case 1:
+      return FE_UPWARD;
+    case 2:
+      return FE_DOWNWARD;
+    case 3:
+      return FE_TOWARDZERO;
+    default:
+      caml_failwith (__FUNCTION__);
+    }
+}
+
 #endif

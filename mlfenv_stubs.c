@@ -20,5 +20,14 @@ CAMLprim value
 caml_fegetround ()
 {
   CAMLparam0 ();
-  CAMLreturn (Val_int (fegetround()));
+  CAMLreturn (Val_int (fegetround ()));
+}
+
+CAMLprim value
+caml_fesetround (value rnd)
+{
+  CAMLparam1 (rnd);
+  if (fesetround (rnd_val (rnd)) != 0)
+    caml_failwith (__FUNCTION__);
+  CAMLreturn (Val_unit);
 }
