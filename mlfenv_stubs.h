@@ -52,4 +52,31 @@ rnd_val (value r)
     }
 }
 
+static value
+val_rnd (int r)
+{
+  CAMLparam0 ();
+  CAMLlocal1 (rnd);
+
+  switch (r)
+    {
+    case FE_TONEAREST:
+      rnd = 0;
+      break;
+    case FE_UPWARD:
+      rnd = 1;
+      break;
+    case FE_DOWNWARD:
+      rnd = 2;
+      break;
+    case FE_TOWARDZERO:
+      rnd = 3;
+      break;
+    default:
+      caml_failwith (__FUNCTION__);
+    }
+
+  CAMLreturn (Val_int (rnd));
+}
+
 #endif

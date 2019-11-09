@@ -20,7 +20,7 @@ CAMLprim value
 caml_fegetround ()
 {
   CAMLparam0 ();
-  CAMLreturn (Val_int (fegetround ()));
+  CAMLreturn (val_rnd (fegetround ()));
 }
 
 CAMLprim value

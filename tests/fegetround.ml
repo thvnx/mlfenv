@@ -14,4 +14,12 @@
    License along with mlfenv. If not, see
    <http://www.gnu.org/licenses/>. *)
 
-Printf.printf "%d\n" (Fenv.fegetround ())
+module F = Fenv
+module P = Printf
+
+let _ =
+  match F.fegetround () with
+  | F.TONEAREST  -> P.printf "FE_NEAREST"
+  | F.UPWARD     -> P.printf "FE_UPWARD"
+  | F.DOWNWARD   -> P.printf "FE_DOWNWARD"
+  | F.TOWARDZERO -> P.printf "FE_TOWARDZERO"
