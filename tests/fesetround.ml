@@ -14,4 +14,10 @@
    License along with mlfenv. If not, see
    <http://www.gnu.org/licenses/>. *)
 
-Fenv.fesetround Fenv.TONEAREST
+module F = Fenv
+
+let _ =
+  F.fesetround F.TONEAREST;
+  F.fesetround F.UPWARD;
+  F.fesetround F.DOWNWARD;
+  F.fesetround F.TOWARDZERO
