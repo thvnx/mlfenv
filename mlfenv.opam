@@ -19,7 +19,7 @@ depends: [
 synopsis: "OCaml C bindings for fenv(3)"
 url {
   src: "https://github.com/thvnx/mlfenv/archive/mlfenv.1.0.0.tar.gz"
-  checksum: "md5=..."
+  checksum: "md5=ce6c1145fb0f91cee9b41685611de3d1"
 }
 description: """
 The package provides bindings for fenv(3).
