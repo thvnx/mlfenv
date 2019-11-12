@@ -7,10 +7,21 @@ The `Fenv` module aims to bind fenv(3) functions for floating-point rounding and
 
 ## install
 
-mlfenv depends on `dune` build system (see `opam` to install `dune`), then:
+### opam
+
+_mlfenv_ is available from `opam`, simply run:
+
+```bash
+opam install mlfenv
+```
+
+### from sources
+
+_mlfenv_ depends on `dune` build system (see `opam` to install `dune`), then:
 
 ```bash
 dune build @all @runtest
+dune install
 ```
 
 ## usage
