@@ -3,7 +3,7 @@
 # mlfenv
 OCaml bindings to fenv(3)
 
-The `Fenv` module aims to bind fenv(3) functions for floating-point rounding and exception handling. At this point, only bindings for `fegetround` and `fesetround` are implemented.
+The `Fenv` module aims to bind fenv(3) functions for floating-point rounding and exception handling. At this point, only bindings for `fegetround` and `fesetround` are implemented. Please, create an issue if you need more support to fenv functions.
 
 ## install
 
