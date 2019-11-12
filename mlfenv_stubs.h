@@ -17,19 +17,9 @@
 #ifndef MLFENV_STUBS_H
 #define MLFENV_STUBS_H
 
-#include <caml/custom.h>
 #include <caml/fail.h>
 #include <caml/memory.h>
 #include <fenv.h>
-
-static struct custom_operations fenv_ops = {"https://github.com/thvnx/mlfenv",
-                                            custom_finalize_default,
-                                            custom_compare_default,
-                                            custom_hash_default,
-                                            custom_serialize_default,
-                                            custom_deserialize_default,
-                                            custom_compare_ext_default,
-                                            custom_fixed_length_default};
 
 static int
 rnd_val (value r)
